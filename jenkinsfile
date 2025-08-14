@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+   tools {
+        maven 'maven_build' // name from global tool config
+    }
+    stages {
+        stage('git checkout') {
+            steps {
+               git branch: "$Branch", url: 'https://github.com/harshith6322/DevOps_jenkins_CI-CD.git'
+            }
+        }
+         stage('mavn build') {
+            steps {
+              sh 'mvn clean install'
+              sh 'sleep 2s'
+           }
+         }
+         stage(" deploy to tomcat") {
+             steps{
+                  sh 'sleep 2s'
+                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat_cred', path: '', url: 'http://34.227.191.159:8080/')], contextPath: 'ecom', war: 'target/*.war'
+             }
+         }
+    }
+}

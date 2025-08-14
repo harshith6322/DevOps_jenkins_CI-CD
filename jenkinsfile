@@ -23,7 +23,7 @@ pipeline {
          }
          stage("upload artifats to nexues"){
             steps{
-               nexusArtifactUploader artifacts: [[artifactId: "$ArtifactId", classifier: '', file: "$File", type: "$Type"]], credentialsId: 'nexus_cred', groupId: "$GroupId", nexusUrl: "$Nexus_URL", nexusVersion: "$Nexus_Version", protocol: "$Protocol", repository: "$Repository", version: "$Version"
+               nexusArtifactUploader artifacts: [[artifactId: "$ArtifactId", classifier: '', file: "$WarFile", type: "$Type"]], credentialsId: 'nexus_cred', groupId: "$GroupId", nexusUrl: "$Nexus_URL", nexusVersion: "$Nexus_Version", protocol: "$Protocol", repository: "$Repository", version: "$Version"
             }
          }
 

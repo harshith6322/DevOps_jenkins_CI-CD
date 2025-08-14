@@ -1,12 +1,12 @@
 pipeline {
     agent any
    tools {
-        maven 'maven_build' // name from global tool config
+        maven 'maven_build' 
     }
     stages {
         stage('git checkout') {
             steps {
-                // change to your git url here
+                // change to your github_url here
                git branch: "$Branch", url: 'https://github.com/harshith6322/DevOps_jenkins_CI-CD.git'
             }
         }
@@ -16,12 +16,7 @@ pipeline {
               sh 'sleep 2s'
            }
          }
-         stage(" deploy to tomcat") {
-             steps{
-                  sh 'sleep 2s'
-                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat_cred', path: '', url: 'http://34.227.191.159:8080/')], contextPath: 'ecom', war: 'target/*.war'
-             }
-         }
+
          stage("upload artifats to nexues"){
             steps{
                 // all ${value} coming from parameter and setup this all params in the jenkins
@@ -32,6 +27,13 @@ pipeline {
             //    nexusArtifactUploader artifacts: [[artifactId: 'junit', classifier: '', file: 'tartget/myweb-8.6.9.war', type: 'war']], credentialsId: 'nexus_cred', groupId: 'in.javahome', nexusUrl: '54.210.178.49:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven_artifact', version: '8.6.9'
             }
          }
+         stage(" deploy to tomcat") {
+             steps{
+                  sh 'sleep 2s'
+                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat_cred', path: '', url: 'http://34.227.191.159:8080/')], contextPath: 'ecom', war: 'target/*.war'
+             }
+         }
+         
 
          
     }

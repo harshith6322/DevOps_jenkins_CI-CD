@@ -11,7 +11,7 @@ pipeline {
         }
          stage('mavn build') {
             steps {
-              sh 'mvn clean install'
+              sh 'mvn install'
               sh 'sleep 2s'
            }
          }

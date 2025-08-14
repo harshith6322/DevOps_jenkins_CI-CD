@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
+                // change to your git url here
                git branch: "$Branch", url: 'https://github.com/harshith6322/DevOps_jenkins_CI-CD.git'
             }
         }
@@ -23,7 +24,12 @@ pipeline {
          }
          stage("upload artifats to nexues"){
             steps{
+                // all ${value} coming from parameter and setup this all params in the jenkins
                nexusArtifactUploader artifacts: [[artifactId: "$ArtifactId", classifier: '', file: "$WarFile", type: "$Type"]], credentialsId: 'nexus_cred', groupId: "$GroupId", nexusUrl: "$Nexus_URL", nexusVersion: "$Nexus_Version", protocol: "$Protocol", repository: "$Repository", version: "$Version"
+
+               //or use this
+               
+            //    nexusArtifactUploader artifacts: [[artifactId: 'junit', classifier: '', file: 'tartget/myweb-8.6.9.war', type: 'war']], credentialsId: 'nexus_cred', groupId: 'in.javahome', nexusUrl: '54.210.178.49:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'maven_artifact', version: '8.6.9'
             }
          }
 

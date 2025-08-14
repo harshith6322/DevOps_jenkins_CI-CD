@@ -21,5 +21,12 @@ pipeline {
                  deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat_cred', path: '', url: 'http://34.227.191.159:8080/')], contextPath: 'ecom', war: 'target/*.war'
              }
          }
+         stage("upload artifats to nexues"){
+            steps{
+               nexusArtifactUploader artifacts: [[artifactId: "$ArtifactId", classifier: '', file: "$File", type: "$Type"]], credentialsId: 'nexus_cred', groupId: "$GroupId", nexusUrl: "$Nexus_URL", nexusVersion: "$Nexus_Version", protocol: "$Protocol", repository: "$Repository", version: "$Version"
+            }
+         }
+
+         
     }
 }

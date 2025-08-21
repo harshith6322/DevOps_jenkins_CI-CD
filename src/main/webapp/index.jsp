@@ -806,6 +806,8 @@
                     <li><a href="#"><i class="fas fa-percent"></i> Deals</a></li>
                     <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
                     <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <!-- adding login link -->
+                       <li><a href="#"><i class="fas fa-envelope"></i> Loign</a></li>
                 </ul>
             </nav>
             

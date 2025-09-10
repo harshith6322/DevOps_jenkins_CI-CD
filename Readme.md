@@ -1,8 +1,13 @@
-<img width="1396" height="878" alt="diagram-export-8-15-2025-4_37_43-AM" src="https://github.com/user-attachments/assets/1ebd1164-e26e-4f89-9656-e8cea971c736" />
 ````markdown
 # 🚀 DevOps Jenkins CI/CD Pipeline
 
-This repository demonstrates a **Jenkins CI/CD pipeline** for building, uploading, and deploying a Java/Maven application with multiple environments and branching strategy.
+This repository demonstrates a **Jenkins CI/CD pipeline** for building, uploading, and deploying a Java/Maven application with multiple environments and a branching strategy.
+
+---
+
+## 📊 CI/CD Workflow
+
+![CI/CD Pipeline Diagram](https://github.com/user-attachments/assets/1ebd1164-e26e-4f89-9656-e8cea971c736)
 
 ---
 
@@ -19,8 +24,8 @@ The pipeline is defined in the `Jenkinsfile` and contains the following stages:
 
 3. **Upload Artifacts to Nexus**  
    - Publishes the `.war` file to **Nexus Repository Manager**.  
-   - Uses `nexusArtifactUploader` plugin.  
-   - Parameters such as `GroupId`, `ArtifactId`, `Version`, and `Repository` are passed from Jenkins job.
+   - Uses the `nexusArtifactUploader` plugin.  
+   - Parameters such as `GroupId`, `ArtifactId`, `Version`, and `Repository` are passed from the Jenkins job.
 
 4. **Deploy to Tomcat**  
    - Deploys the generated `.war` file into **Apache Tomcat 9** server.  
@@ -82,7 +87,9 @@ The pipeline expects the following **parameters** to be configured in Jenkins:
    * `maven_build` tool
    * `nexus_cred` credentials for Nexus
    * `tomcat_cred` credentials for Tomcat
+
 3. Run the pipeline with required parameters.
+
 4. Verify:
 
    * WAR file uploaded in Nexus
@@ -118,18 +125,14 @@ version: '8.6.9'
 
 * Every commit to a branch triggers a Jenkins build.
 * Artifacts are uploaded to Nexus.
-* WAR is deployed on Tomcat automatically.
+* WAR is deployed to Tomcat automatically.
 
 ---
 
 ## 🧑‍💻 Author
 
 **Harshith Reddy**
- DevOps Engineer & React
+DevOps Engineer & React Developer
 
 ---
-
-
-
-
 

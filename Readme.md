@@ -1,8 +1,3 @@
-````markdown
-# 🚀 DevOps Jenkins CI/CD Pipeline
-
-This repository demonstrates a **Jenkins CI/CD pipeline** for building, uploading, and deploying a Java/Maven application with multiple environments and a branching strategy.
-
 ---
 
 ## 📊 CI/CD Workflow
@@ -10,6 +5,11 @@ This repository demonstrates a **Jenkins CI/CD pipeline** for building, uploadin
 ![CI/CD Pipeline Diagram](https://github.com/user-attachments/assets/1ebd1164-e26e-4f89-9656-e8cea971c736)
 
 ---
+````markdown
+# 🚀 DevOps Jenkins CI/CD Pipeline
+
+This repository demonstrates a **Jenkins CI/CD pipeline** for building, uploading, and deploying a Java/Maven application with multiple environments and a branching strategy.
+
 
 ## 📌 Pipeline Overview
 
@@ -135,4 +135,5 @@ version: '8.6.9'
 DevOps Engineer & React Developer
 
 ---
+
 

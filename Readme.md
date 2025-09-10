@@ -1,3 +1,4 @@
+<img width="1396" height="878" alt="diagram-export-8-15-2025-4_37_43-AM" src="https://github.com/user-attachments/assets/1ebd1164-e26e-4f89-9656-e8cea971c736" />
 ````markdown
 # 🚀 DevOps Jenkins CI/CD Pipeline
 
@@ -127,6 +128,7 @@ version: '8.6.9'
  DevOps Engineer & React
 
 ---
+
 
 
 

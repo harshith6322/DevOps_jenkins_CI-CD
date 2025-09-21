@@ -116,7 +116,7 @@ nexusUrl: '54.210.178.49:8081',
 nexusVersion: 'nexus2',
 protocol: 'http',
 repository: 'maven_artifact',
-version: '8.6.9'
+version: '8.6.9.9'
 ```
 
 ---
@@ -135,6 +135,7 @@ version: '8.6.9'
 DevOps Engineer & React Developer
 
 ---
+
 
 
 

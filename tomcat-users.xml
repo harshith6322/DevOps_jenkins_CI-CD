@@ -16,6 +16,7 @@
   limitations under the License.
 -->
 <!-- from local -->
+<!--from remote  -->
 <tomcat-users xmlns="http://tomcat.apache.org/xml"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"

@@ -3,6 +3,8 @@ name: check
 on:
   pull_request:
     branches: [ main, dev]
+    paths: 
+      - "!/.github/**"
 
 jobs:
   check:

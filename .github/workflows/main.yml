@@ -1,0 +1,15 @@
+name: check
+
+on:
+  pull_request:
+    branches: [ main, dev]
+    paths: 
+      - "!/.github/**"
+      - "**"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-1
+        run: echo "check on pr"
